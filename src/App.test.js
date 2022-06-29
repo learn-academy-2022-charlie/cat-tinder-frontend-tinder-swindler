@@ -18,25 +18,23 @@ describe("When App.js renders to the user", () => {
   let appRender
   beforeEach(() => {
       appRender = shallow(<App/>)
+  })
   it("it displays a header and a footer", () => {
     const appHeaderRender = appRender.find("Header") 
     expect(appHeaderRender.length).toEqual(1)
+  })
+    it("it displays a header and a footer", () => {
+      // const appRender = shallow(<App/>)
+      const appFooterRender = appRender.find("Footer") 
+      expect(appFooterRender.length).toEqual(1)
+    })
+      it("it provides a path to the home component", () => {
+        // ('[]')
+        const renderHomePath = appRender.find('[path="/"]')
+        console.log(renderHomePath.debug()) //special in Enzyme
+        expect(renderHomePath.length).toEqual(1)
     
   })
+  
 })
 
-
-  it("it displays a header and a footer", () => {
-    // const appRender = shallow(<App/>)
-    const appFooterRender = appRender.find("Footer") 
-    expect(appFooterRender.length).toEqual(1)
-    
-  })
-  it("it provides a path to the home component", () => {
-    // ('[]')
-    const renderHomePath = appRender.find('[path="/"]')
-    console.log(renderHomePath.debug()) //special in Enzyme
-    expect(renderHomePath.length).toEqual(1)
-
-  })
-})
