@@ -15,11 +15,11 @@ Enzyme.configure({adapter: new Adapter()})
 
 describe("when Home renders", ()=> {
     let homeRender
-    beforeEach(() => {
-        homeRender = shallow(<Home/>)
-    })
-    it("Home has text", () => {
-        const homeText = homeRender.find("[className='Home']")
-        expect(homeText.length).toEqual(1)
-    })
+        beforeEach(() => {
+            homeRender = shallow(<Home/>)
+        })
+            it("Home has text", () => {
+                const homeText = homeRender.find("[className='Home']")
+                expect(homeText.length).toEqual(1)
+            })
 })

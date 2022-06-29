@@ -15,11 +15,11 @@ Enzyme.configure({adapter: new Adapter()})
 
 describe("when Footer renders", ()=> {
     let footerRender
-    beforeEach(() => {
-        footerRender = shallow(<Footer/>)
-    })
-    it("Footer has text", () => {
-        const footerText = footerRender.find("[className='Footer']")
-        expect(footerText.length).toEqual(1)
-    })
+        beforeEach(() => {
+            footerRender = shallow(<Footer/>)
+        })
+            it("Footer has text", () => {
+                const footerText = footerRender.find("[className='Footer']")
+                expect(footerText.length).toEqual(1)
+            })
 })

@@ -15,15 +15,15 @@ Enzyme.configure({adapter: new Adapter()})
 
 describe("when Header renders", ()=> {
     let headerRender
-    beforeEach(() => {
-        headerRender = shallow(<Header/>)
-    })
-    it("Header has text", () => {
-        const headerText = headerRender.find("[className='Header']")
-        expect(headerText.length).toEqual(1)
-    })
-    it("displays 3 navlinks", () => {
-        const navLinkHeaderRender = headerRender.find("NavLink")
-        expect(navLinkHeaderRender.length).toEqual(3)
-    })
+        beforeEach(() => {
+            headerRender = shallow(<Header/>)
+         })
+            it("Header has text", () => {
+                const headerText = headerRender.find("[className='Header']")
+                expect(headerText.length).toEqual(1)
+            })
+            it("displays 3 navlinks", () => {
+                const navLinkHeaderRender = headerRender.find("NavLink")
+                expect(navLinkHeaderRender.length).toEqual(3)
+            })
 })

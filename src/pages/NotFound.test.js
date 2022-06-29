@@ -15,11 +15,11 @@ Enzyme.configure({adapter: new Adapter()})
 
 describe("when NotFound renders", ()=> {
     let notFoundRender
-    beforeEach(() => {
-        notFoundRender = shallow(<NotFound/>)
-    })
-    it("NotFound has text", () => {
-        const notFoundText = notFoundRender.find("[className='notFound']")
-        expect(notFoundText.length).toEqual(1)
-    })
+        beforeEach(() => {
+            notFoundRender = shallow(<NotFound/>)
+        })
+            it("NotFound has text", () => {
+                const notFoundText = notFoundRender.find("[className='notFound']")
+                expect(notFoundText.length).toEqual(1)
+            })
 })
