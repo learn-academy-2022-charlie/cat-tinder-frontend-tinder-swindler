@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
+import AnimeEdit from './pages/AnimeEdit'
+import AnimeIndex from './pages/AnimeIndex'
+import AnimeNew from './pages/AnimeNew'
+import AnimeShow from './pages/AnimeShow'
+import NotFound from './pages/NotFound'
+import Header from './components/Header'
+import Home from  './pages/Home'
+import Footer from './components/Footer'
+import mockAnime from './mockAnime.js'
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+export default class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      anime: mockAnime
+    }
+  }
+  render() {
+    return (
+     
+
+      <Router>
+
+        <Header/>
+          <h1>Anime Ü -- App.js</h1>
+
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/animeindex" component={AnimeIndex} />
+            <Route path="/animeshow" component={AnimeShow} />
+            <Route path="/animenew" component={AnimeNew} />
+            <Route path="/animeedit" component={AnimeEdit} />
+            <Route component={NotFound}/>
+          </Switch>
+        <Footer/>
+
+      </Router>
+       
+     
+    )
+  }
 }
 
-export default App;
