@@ -31,19 +31,20 @@ export default class App extends Component {
 
       <Router>
 
-  <Header/>
-  <h1>We don't know what the them will be -- App.js</h1>
+        <Header/>
+          <h1>Anime Ü -- App.js</h1>
 
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/animeindex" component={AnimeIndex} />
-      <Route path="/animeshow" component={AnimeShow} />
-      <Route path="/animenew" component={AnimeNew} />
-      <Route path="/animeedit" component={AnimeEdit} />
-      <Route component={NotFound}/>
-    </Switch>
-  <Footer/>
-</Router>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/animeindex" component={AnimeIndex} />
+            <Route path="/animeshow" component={AnimeShow} />
+            <Route path="/animenew" component={AnimeNew} />
+            <Route path="/animeedit" component={AnimeEdit} />
+            <Route component={NotFound}/>
+          </Switch>
+        <Footer/>
+
+      </Router>
        
      
     )
