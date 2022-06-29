@@ -8,22 +8,18 @@ import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
 // Imports in the component we are going to be testing.
-import Header from './Header.js'
+import Footer from './Footer.js'
 
 //Allows us to utilize the adapter we import in earlier, allowing us to call and render a component.
 Enzyme.configure({adapter: new Adapter()})
 
-describe("when Header renders", ()=> {
-    let headerRender
+describe("when Footer renders", ()=> {
+    let footerRender
         beforeEach(() => {
-            headerRender = shallow(<Header/>)
-         })
-            it("Header has text", () => {
-                const headerText = headerRender.find("[className='Header']")
-                expect(headerText.length).toEqual(1)
-            })
-            it("displays 3 navlinks", () => {
-                const navLinkHeaderRender = headerRender.find("NavLink")
-                expect(navLinkHeaderRender.length).toEqual(3)
+            footerRender = shallow(<Footer/>)
+        })
+            it("Footer has text", () => {
+                const footerText = footerRender.find("[className='Footer']")
+                expect(footerText.length).toEqual(1)
             })
 })

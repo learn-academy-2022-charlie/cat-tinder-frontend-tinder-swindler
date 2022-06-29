@@ -14,3 +14,13 @@
   color: red;
   font-size: 50px;
 }
+
+.logo{
+  width: 8%;
+}
+.navLink{
+  text-decoration: none;
+  text-align: center;
+  color: aqua;
+  
+}
