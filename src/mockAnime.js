@@ -35,4 +35,4 @@ let anime = [
     image: "https://static1.srcdn.com/wordpress/wp-content/uploads/2022/04/shinobu-demon-slayer-sword.jpg?q=50&fit=crop&w=740&h=370&dpr=1.5"
 }
   ]
-  export default anime
+  export default anime 
